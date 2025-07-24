@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تشجير أنواع التشبيه</title>
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: rgb(76, 175, 162);
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #00796b;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .tree ul {
+      padding-top: 20px;
+      position: relative;
+      display: table;
+      margin: auto;
+    }
+
+    .tree li {
+      display: table-cell;
+      vertical-align: top;
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 20px 10px 0 10px;
+    }
+
+    .tree li::before, .tree li::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      border-top: 2px solid #90a4ae;
+      width: 50%;
+      height: 20px;
+    }
+
+    .tree li::before {
+      right: 50%;
+      border-right: 2px solid #90a4ae;
+    }
+
+    .tree li::after {
+      left: 50%;
+      border-left: 2px solid #90a4ae;
+    }
+
+    .tree li:only-child::before,
+    .tree li:only-child::after {
+      display: none;
+    }
+
+    .tree li:only-child {
+      padding-top: 0;
+    }
+
+    .tree li > ul::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      border-left: 2px solid #90a4ae;
+      width: 0;
+      height: 20px;
+    }
+
+    .node {
+      display: inline-block;
+      padding: 15px 20px;
+      border: 2px solid #009688;
+      border-radius: 12px;
+      background: linear-gradient(to bottom right, #e0f2f1, #b2dfdb);
+      font-weight: bold;
+      font-size: 18px;
+      color: #004d40;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .node:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to bottom right, #b2dfdb, #80cbc4);
+    }
+
+    .example {
+      font-size: 14px;
+      color: #00695c;
+      margin-top: 5px;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+  <h2><strong>تشجير أنواع التشبيه في البلاغة </strong></h2>
+  <div class="tree">
+    <ul>
+      <li>
+        <div class="node">التشبيه</div>
+        <ul>
+          <li>
+            <div class="node">بحسب الأداة</div>
+            <ul>
+              <li>
+                <div class="node">
+                  مُرْسَل<br>
+                  <span class="example">(ذُكرت الأداة)<br>الولد كالملَك</span>
+                </div>
+              </li>
+              <li>
+                <div class="node">
+                  مُؤَكَّد<br>
+                  <span class="example">(حُذفت الأداة)<br>الولد ملك في أخلاقه</span>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="node">بحسب وجه الشبه</div>
+            <ul>
+              <li>
+                <div class="node">
+                  مُفَصَّل<br>
+                  <span class="example">(ذُكر وجه الشبه)<br>الولد كالنجم في الصفاء</span>
+                </div>
+              </li>
+              <li>
+                <div class="node">
+                  مُجْمَل<br>
+                  <span class="example">(حُذف وجه الشبه)<br>الولد كالنجم</span>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="node">
+              التشبيه البليغ<br>
+              <span class="example">(حُذفت الأداة ووجه الشبه)<br>الولد نجم</span>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
